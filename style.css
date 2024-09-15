@@ -1,0 +1,83 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.myCanvas
+{
+    height: 100vh;
+    width: 100%;
+    background-image: url(image/background.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    
+
+}
+.road
+{
+    height: 60vh;
+    width: 800%;
+    background-image: url(image/road.png);
+    background-size: contain;
+    position: absolute;
+    bottom: -90px;
+    animation: rotateRoad 13s linear infinite;
+
+}
+
+/* Car Section */
+#car
+{
+    width: 500px !important;
+    height: 200px ;
+    left: 0;
+    bottom: 10px;
+    position: absolute;
+    z-index: 10;
+
+}
+.car-body img
+{
+    width: 100%;
+}
+.wheel 
+{
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+}
+.back-wheel
+{
+    left: -190px;
+    position: absolute;
+}
+.front-wheel
+{
+    left: 112px;
+    position: absolute;
+}
+.wheel img
+{
+    width: 72px;
+    height: 72px;
+    animation: rotateWheel 1s linear infinite;
+}
+@keyframes rotateWheel
+{
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateRoad
+{
+    100%
+    {
+        transform: translateX(-500vw);
+    }
+}
